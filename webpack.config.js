@@ -1,14 +1,22 @@
 var webpack=require('webpack')
 
 module.exports={
-	entry:'./index.js',
+	entry:'./src/js/index.js',
 	output:{
-		path:__dirname,
+		path:__dirname + '/build',
 		filename:'bundle.js'
 	},
 	module:{
 		loaders:[
-			{test:/\.css$/,loader:'style!css'}
+			{   test:/\.css$/ , loader:'style!css' },
+			{   test: /\.js$/ , loader: 'babel-loader' ,
+				query: {
+		          presets: ['es2015']
+		        }
+			},
+			{   test: /\.jsx?$/ , loader: 'babel'}, 
+			{	test: /\.less$/,      loader: 'style!css!less'    },
+			{ 	test: /\.(png|jpg)$/, loader: 'url?limit=25000'  }
 		]
 	},
 	plugins: [
