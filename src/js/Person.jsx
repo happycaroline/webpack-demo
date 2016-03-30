@@ -2,8 +2,8 @@ import React,{Component} from 'react'
 
 class HelloMessage extends React.Component {
   render() {
-    return <div>Hello {this.props.name}</div>
+    return <div>Hello</div>
   }
 }
 
-React.render(<HelloMessage name="Sebastian" />, mountNode)
+export default  HelloMessage
