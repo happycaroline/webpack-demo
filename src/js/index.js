@@ -1,8 +1,8 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import HelloMessage from './Person.jsx';
+import ReactDOM from 'react-dom'
+import Homepage from './components/Homepage/index.jsx'
 
 ReactDOM.render(
-    <HelloMessage />,
+    <Homepage />,
     document.getElementById('root')
 )
